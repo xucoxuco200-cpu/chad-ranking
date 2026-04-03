@@ -83,6 +83,33 @@
         margin-top: 5px;
         font-style: italic;
     }
+
+    /* Fire Animation */
+    .crown-wrapper {
+        position: relative;
+        display: inline-block;
+        margin-left: 5px;
+    }
+
+    .fire {
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 20px;
+        height: 40px;
+        background: linear-gradient(to top, orange, yellow, transparent);
+        border-radius: 50%;
+        filter: blur(3px);
+        animation: flicker 0.3s infinite alternate;
+        pointer-events: none;
+    }
+
+    @keyframes flicker {
+        0% { transform: translateX(-50%) scaleY(1) scaleX(1); opacity: 1; }
+        50% { transform: translateX(-50%) scaleY(1.2) scaleX(0.9); opacity: 0.8; }
+        100% { transform: translateX(-50%) scaleY(0.8) scaleX(1.1); opacity: 1; }
+    }
 </style>
 </head>
 <body>
@@ -101,28 +128,32 @@
         <tr>
             <td class="rank">1</td>
             <td>
-                <img src="image 1.jpg" alt="DATO">👑 DATO LTN SHONIA
-                <div class="bio">rapes kids at garden👀👀👀</div>
+                <img src="image 1.jpg" alt="DATO">
+                <span class="crown-wrapper">👑<span class="fire"></span></span> DATO LTN SHONIA
+                <div class="bio"> kids at garden👀👀👀</div>
             </td>
         </tr>
         <tr>
             <td class="rank">2</td>
             <td>
-                <img src="image 4.jpg" alt="Kartvela">👑 Kartvela
+                <img src="image 4.jpg" alt="Kartvela">
+                <span class="crown-wrapper">👑<span class="fire"></span></span> Kartvela
                 <div class="bio"></div>
             </td>
         </tr>
         <tr>
             <td class="rank">3</td>
             <td>
-                <img src="image 2.jpg" alt="Saba BTN Xucishvili">👑 Saba BTN Xucishvili
+                <img src="image 2.jpg" alt="Saba BTN Xucishvili">
+                <span class="crown-wrapper">👑<span class="fire"></span></span> Saba BTN Xucishvili
                 <div class="bio">Master of Regression</div>
             </td>
         </tr>
         <tr>
             <td class="rank">4</td>
             <td>
-                <img src="image 3.jpg" alt="GABRIEL TONA">👑 GABRIEL TONA
+                <img src="image 3.jpg" alt="GABRIEL TONA">
+                <span class="crown-wrapper">👑<span class="fire"></span></span> GABRIEL TONA
                 <div class="bio"></div>
             </td>
         </tr>
