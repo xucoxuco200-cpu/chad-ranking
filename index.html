@@ -1,98 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ultimate CHUD Rankings</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 20px;
-        }
-
-        h1 {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .ranking-table {
-            max-width: 400px;
-            margin: 0 auto;
-            border-collapse: collapse;
-            width: 100%;
-        }
-
-        .ranking-table th, .ranking-table td {
-            border: 1px solid #ccc;
-            padding: 12px 15px;
-            text-align: left;
-        }
-
-        .ranking-table th {
-            background-color: #333;
-            color: #fff;
-        }
-
-        .ranking-table tr:nth-child(even) {
-            background-color: #eaeaea;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ultimate CHUD Rankings</title>
+<style>
+    body { font-family: Arial; background: #f0f0f0; padding: 20px; }
+    h1 { text-align: center; margin-bottom: 40px; }
+    table { border-collapse: collapse; margin: 0 auto; width: 400px; }
+    th, td { border: 1px solid #ccc; padding: 12px; text-align: left; }
+    th { background: #333; color: #fff; }
+    tr:nth-child(even) { background: #eaeaea; }
+    img { width: 40px; height: 40px; vertical-align: middle; margin-right: 10px; }
+</style>
 </head>
 <body>
-    <h1>Ultimate CHUD Rankings – Rated by Urban University</h1>
+<h1>Ultimate CHUD Rankings – Rated by Urban University</h1>
 
-    <table class="ranking-table">
-        <thead>
-            <tr>
-                <th>Rank</th>
-                <th>Name</th>
-            </tr>
-        </thead>
-        <tbody id="ranking-body">
-            <!-- JS will insert rows here -->
-        </tbody>
-    </table>
-
-    <script>
-        // ---------------------------
-        // STEP: JUST ADD IMAGE NAME
-        // ---------------------------
-        const characters = [
-            { name: "Dato", img: "image1.jpg" },       // <- type your image name here
-            { name: "Kartvela", img: "4.jpg" },   // <- type your image name here
-            { name: "Saba", img: "2.jpg" },       // <- type your image name here
-            { name: "Gabo", img: "3.jpg" }        // <- type your image name here
-        ];
-
-        const tbody = document.getElementById("ranking-body");
-
-        characters.forEach((p, i) => {
-            const tr = document.createElement("tr");
-
-            // Rank column
-            const td1 = document.createElement("td");
-            td1.textContent = i + 1;
-
-            // Name + Image column
-            const td2 = document.createElement("td");
-
-            const img = document.createElement("img");
-            img.src = p.img;             // <- this is your image filename
-            img.alt = p.name;
-            img.style.width = "40px";
-            img.style.height = "40px";
-            img.style.marginRight = "10px";
-            img.style.verticalAlign = "middle";
-
-            td2.appendChild(img);
-            td2.appendChild(document.createTextNode("👑 " + p.name));
-
-            tr.appendChild(td1);
-            tr.appendChild(td2);
-            tbody.appendChild(tr);
-        });
-    </script>
+<table>
+    <thead>
+        <tr>
+            <th>Rank</th>
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td><img src="image 1.jpg" alt="Dato">👑 Dato</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td><img src="image 4.jpg" alt="Kartvela">👑 Kartvela</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td><img src="image 2.jpg" alt="Saba">👑 Saba</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td><img src="image 3.jpg" alt="Gabo">👑 Gabo</td>
+        </tr>
+    </tbody>
+</table>
 </body>
 </html>
