@@ -1,116 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>🔥 Ultimate Chud Ranking 🔥</title>
-  <style>
-    /* Body & background */
-    html, body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-      font-family: 'Comic Sans MS', cursive, sans-serif;
-      text-align: center;
-      background: url('image5.jpg') center/cover no-repeat;
-      color: white;
-    }
+<meta charset="UTF-8">
+<title>Ultimate Chud Rankings</title>
 
-    h1 {
-      font-size: 50px;
-      margin: 20px 0;
-      text-shadow: 2px 2px #000;
-    }
+<style>
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  color: white;
 
-    /* Card styles */
-    .card {
-      background: linear-gradient(135deg, #ffcc00, #ff9900);
-      margin: 20px auto;
-      padding: 20px;
-      width: 350px;
-      border-radius: 20px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.6);
-      transition: transform 0.3s, background 0.3s;
-    }
+  background-image: url("image%205.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
-    .card:hover {
-      transform: scale(1.05);
-      background: linear-gradient(135deg, #ffeb3b, #ff6f00);
-    }
+h1 {
+  margin-top: 20px;
+  font-size: 40px;
+}
 
-    h3 {
-      font-size: 24px;
-      margin: 10px 0;
-    }
+.subtitle {
+  font-size: 16px;
+  margin-bottom: 30px;
+}
 
-    /* Buttons */
-    button {
-      margin: 5px;
-      padding: 10px 20px;
-      cursor: pointer;
-      border: none;
-      border-radius: 10px;
-      background-color: #fff;
-      color: #ff4e50;
-      font-weight: bold;
-      font-size: 16px;
-      transition: 0.3s;
-    }
+/* Card */
+.card {
+  background: rgba(0,0,0,0.7);
+  margin: 15px auto;
+  padding: 15px;
+  width: 350px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
 
-    button:hover {
-      background-color: #ff4e50;
-      color: #fff;
-    }
+/* Images */
+.card img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+}
 
-  </style>
+/* Text */
+.card h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+/* Buttons */
+button {
+  margin-left: auto;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+</style>
 </head>
+
 <body>
-  <h1>🔥 Ultimate Chad Ranking 🔥</h1>
-  <div id="list"></div>
 
-  <script>
-    // Friends list with optional emojis for ranks
-    let people = [
-      "Dato LTN Shonia",
-      "Gabriel AKA tona",
-      "kartvela",
-      "saba Btn xucishvili"
-    ];
+<h1>Ultimate Chud Rankings</h1>
+<div class="subtitle">rated by urban university</div>
 
-    const rankEmojis = ["👑", "🥈", "🥉", "🔥"];
+<div id="list"></div>
 
-    const list = document.getElementById("list");
+<script>
+let people = [
+  { name: "Dato LTN Shonia", img: "image 1.jpg" },
+  { name: "Kartvela", img: "image 4.jpg" },
+  { name: "Saba Btn xucishvili", img: "image 2.jpg" },
+  { name: "Gabriel Tona mazana", img: "image 3.jpg" }
+];
 
-    function render() {
-      list.innerHTML = "";
-      people.forEach((name, i) => {
-        let div = document.createElement("div");
-        div.className = "card";
+function render() {
+  let list = document.getElementById("list");
+  list.innerHTML = "";
 
-        // Get emoji for rank
-        let emoji = rankEmojis[i] || "💪";
+  people.forEach((person, i) => {
+    let div = document.createElement("div");
+    div.className = "card";
 
-        div.innerHTML = `
-          <h3>#${i+1} ${emoji} ${name}</h3>
-          <button onclick="moveUp(${i})">⬆</button>
-          <button onclick="moveDown(${i})">⬇</button>
-        `;
-        list.appendChild(div);
-      });
-    }
+    div.innerHTML = `
+      <img src="${person.img}">
+      <h3>👑 ${person.name}</h3>
+      <button onclick="moveUp(${i})">⬆</button>
+      <button onclick="moveDown(${i})">⬇</button>
+    `;
 
-    function moveUp(i) {
-      if (i === 0) return;
-      [people[i], people[i-1]] = [people[i-1], people[i]];
-      render();
-    }
+    list.appendChild(div);
+  });
+}
 
-    function moveDown(i) {
-      if (i === people.length - 1) return;
-      [people[i], people[i+1]] = [people[i+1], people[i]];
-      render();
-    }
+function moveUp(i) {
+  if (i === 0) return;
+  [people[i], people[i-1]] = [people[i-1], people[i]];
+  render();
+}
 
-    render();
-  </script>
+function moveDown(i) {
+  if (i === people.length - 1) return;
+  [people[i], people[i+1]] = [people[i+1], people[i]];
+  render();
+}
+
+render();
+</script>
+
 </body>
 </html>
