@@ -7,65 +7,75 @@
 <style>
     body {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background-color: #f9f9f9;
+        background-image: url('5.jpg'); /* your background image */
+        background-size: cover; /* stretch to cover screen */
+        background-position: center;
+        background-repeat: no-repeat;
         margin: 0;
-        padding: 40px;
-        color: #222;
+        padding: 60px;
+        color: #fff; /* text white for contrast */
+        text-shadow: 1px 1px 4px rgba(0,0,0,0.7); /* make text readable */
     }
 
     h1 {
         text-align: center;
-        font-size: 36px;
+        font-size: 50px;
         font-weight: bold;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
 
     h2 {
         text-align: center;
-        font-size: 20px;
+        font-size: 28px;
         font-weight: normal;
-        margin-bottom: 40px;
-        color: #555;
+        margin-bottom: 50px;
+        color: #f0f0f0;
+        text-shadow: 2px 2px 5px rgba(0,0,0,0.8);
     }
 
     table {
-        width: 600px;
+        width: 80%;
         margin: 0 auto;
         border-collapse: collapse;
-        background-color: #fff;
-        box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        background-color: rgba(0,0,0,0.6); /* semi-transparent black */
+        box-shadow: 0 0 25px rgba(0,0,0,0.5);
+        border-radius: 15px;
+        overflow: hidden;
     }
 
     th, td {
-        padding: 20px;
-        border-bottom: 1px solid #ddd;
+        padding: 30px;
         text-align: left;
-        font-size: 22px;
+        font-size: 30px;
+        color: #fff;
     }
 
     th {
-        background-color: #0a3d62;
-        color: #fff;
-        font-size: 24px;
+        background-color: rgba(10,61,98,0.9);
+        font-size: 34px;
+    }
+
+    tr:nth-child(even) {
+        background-color: rgba(255,255,255,0.1);
     }
 
     tr:hover {
-        background-color: #f1f1f1;
+        background-color: rgba(255,255,255,0.2);
     }
 
     img {
-        width: 60px;
-        height: 60px;
+        width: 100px;
+        height: 100px;
         vertical-align: middle;
-        margin-right: 15px;
-        border-radius: 10px;
+        margin-right: 20px;
+        border-radius: 15px;
+        border: 3px solid #fff;
     }
 
     td.rank {
         font-weight: bold;
-        font-size: 26px;
+        font-size: 36px;
     }
-
 </style>
 </head>
 <body>
