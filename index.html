@@ -135,11 +135,24 @@
         100% { box-shadow: 0 0 10px #fff; transform: scale(1); }
     }
 
-    /* Rank colors for top 3 */
-    tbody tr:nth-child(1) td.rank { color: gold; }
-    tbody tr:nth-child(2) td.rank { color: silver; }
-    tbody tr:nth-child(3) td.rank { color: #cd7f32; } /* bronze */
-    tbody tr:nth-child(4) td.rank { color: #fff; } /* normal */
+    /* Rank quadrate style */
+    td.rank span {
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 36px;
+        border-radius: 10px;
+        color: #fff;
+    }
+
+    tbody tr:nth-child(1) td.rank span { background-color: gold; color: black; }
+    tbody tr:nth-child(2) td.rank span { background-color: silver; color: black; }
+    tbody tr:nth-child(3) td.rank span { background-color: #cd7f32; color: black; }
+    tbody tr:nth-child(4) td.rank span { background-color: #444; color: #fff; }
+
 </style>
 </head>
 <body>
@@ -156,16 +169,16 @@
     </thead>
     <tbody>
         <tr>
-            <td class="rank">1</td>
+            <td class="rank"><span>1</span></td>
             <td>
                 <img src="image 1.jpg" alt="DATO">
                 <span class="crown-wrapper">👑<span class="fire"></span></span>
                 <span class="name-animated">DATO LTN SHONIA</span>
-                <div class="bio"> rapes kids at garden👀👀👀</div>
+                <div class="bio"> kids at garden👀👀👀</div>
             </td>
         </tr>
         <tr>
-            <td class="rank">2</td>
+            <td class="rank"><span>2</span></td>
             <td>
                 <img src="image 4.jpg" alt="Kartvela">
                 <span class="crown-wrapper">👑<span class="fire"></span></span>
@@ -174,7 +187,7 @@
             </td>
         </tr>
         <tr>
-            <td class="rank">3</td>
+            <td class="rank"><span>3</span></td>
             <td>
                 <img src="image 2.jpg" alt="Saba BTN Xucishvili">
                 <span class="crown-wrapper">👑<span class="fire"></span></span>
@@ -183,7 +196,7 @@
             </td>
         </tr>
         <tr>
-            <td class="rank">4</td>
+            <td class="rank"><span>4</span></td>
             <td>
                 <img src="image 3.jpg" alt="GABRIEL TONA">
                 <span class="crown-wrapper">👑<span class="fire"></span></span>
