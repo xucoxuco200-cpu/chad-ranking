@@ -70,6 +70,7 @@
         margin-right: 20px;
         border-radius: 15px;
         border: 3px solid #fff;
+        animation: glow 2s infinite alternate;
     }
 
     td.rank {
@@ -110,6 +111,30 @@
         50% { transform: translateX(-50%) scaleY(1.2) scaleX(0.9); opacity: 0.8; }
         100% { transform: translateX(-50%) scaleY(0.8) scaleX(1.1); opacity: 1; }
     }
+
+    /* Name fade color animation */
+    .name-animated {
+        display: inline-block;
+        animation: colorFade 3s infinite alternate;
+    }
+
+    @keyframes colorFade {
+        0% { color: #ff0000; text-shadow: 0 0 5px #ff0000; }
+        25% { color: #ff7f00; text-shadow: 0 0 10px #ff7f00; }
+        50% { color: #ffff00; text-shadow: 0 0 15px #ffff00; }
+        75% { color: #00ff00; text-shadow: 0 0 10px #00ff00; }
+        100% { color: #00ffff; text-shadow: 0 0 5px #00ffff; }
+    }
+
+    /* Image glow animation */
+    @keyframes glow {
+        0% { box-shadow: 0 0 10px #fff; transform: scale(1); }
+        25% { box-shadow: 0 0 20px #ff0; transform: scale(1.05); }
+        50% { box-shadow: 0 0 30px #f0f; transform: scale(1); }
+        75% { box-shadow: 0 0 20px #0ff; transform: scale(1.05); }
+        100% { box-shadow: 0 0 10px #fff; transform: scale(1); }
+    }
+
 </style>
 </head>
 <body>
@@ -129,7 +154,8 @@
             <td class="rank">1</td>
             <td>
                 <img src="image 1.jpg" alt="DATO">
-                <span class="crown-wrapper">👑<span class="fire"></span></span> DATO LTN SHONIA
+                <span class="crown-wrapper">👑<span class="fire"></span></span>
+                <span class="name-animated">DATO LTN SHONIA</span>
                 <div class="bio"> kids at garden👀👀👀</div>
             </td>
         </tr>
@@ -137,7 +163,8 @@
             <td class="rank">2</td>
             <td>
                 <img src="image 4.jpg" alt="Kartvela">
-                <span class="crown-wrapper">👑<span class="fire"></span></span> Kartvela
+                <span class="crown-wrapper">👑<span class="fire"></span></span>
+                <span class="name-animated">Kartvela</span>
                 <div class="bio"></div>
             </td>
         </tr>
@@ -145,7 +172,8 @@
             <td class="rank">3</td>
             <td>
                 <img src="image 2.jpg" alt="Saba BTN Xucishvili">
-                <span class="crown-wrapper">👑<span class="fire"></span></span> Saba BTN Xucishvili
+                <span class="crown-wrapper">👑<span class="fire"></span></span>
+                <span class="name-animated">Saba BTN Xucishvili</span>
                 <div class="bio">Master of Regression</div>
             </td>
         </tr>
@@ -153,7 +181,8 @@
             <td class="rank">4</td>
             <td>
                 <img src="image 3.jpg" alt="GABRIEL TONA">
-                <span class="crown-wrapper">👑<span class="fire"></span></span> GABRIEL TONA
+                <span class="crown-wrapper">👑<span class="fire"></span></span>
+                <span class="name-animated">GABRIEL TONA</span>
                 <div class="bio"></div>
             </td>
         </tr>
