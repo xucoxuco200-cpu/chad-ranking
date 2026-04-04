@@ -85,7 +85,6 @@
         font-style: italic;
     }
 
-    /* Fire Animation */
     .crown-wrapper {
         position: relative;
         display: inline-block;
@@ -112,7 +111,6 @@
         100% { transform: translateX(-50%) scaleY(0.8) scaleX(1.1); opacity: 1; }
     }
 
-    /* Name fade color animation */
     .name-animated {
         display: inline-block;
         animation: colorFade 3s infinite alternate;
@@ -126,7 +124,6 @@
         100% { color: #00ffff; text-shadow: 0 0 5px #00ffff; }
     }
 
-    /* Image glow animation */
     @keyframes glow {
         0% { box-shadow: 0 0 10px #fff; transform: scale(1); }
         25% { box-shadow: 0 0 20px #ff0; transform: scale(1.05); }
@@ -135,7 +132,6 @@
         100% { box-shadow: 0 0 10px #fff; transform: scale(1); }
     }
 
-    /* Rank quadrate style */
     td.rank span {
         display: inline-block;
         width: 60px;
@@ -168,8 +164,20 @@
         </tr>
     </thead>
     <tbody>
+        <!-- 1st -->
         <tr>
             <td class="rank"><span>1</span></td>
+            <td>
+                <img src="image 3.jpg" alt="GABRIEL TONA">
+                <span class="crown-wrapper">👑<span class="fire"></span></span>
+                <span class="name-animated">GABRIEL TONA</span>
+                <div class="bio">mini rira ramirez</div>
+            </td>
+        </tr>
+
+        <!-- 2nd -->
+        <tr>
+            <td class="rank"><span>2</span></td>
             <td>
                 <img src="image 1.jpg" alt="DATO">
                 <span class="crown-wrapper">👑<span class="fire"></span></span>
@@ -177,8 +185,10 @@
                 <div class="bio"> Spawncamping foids at kindergarten </div>
             </td>
         </tr>
+
+        <!-- 3rd -->
         <tr>
-            <td class="rank"><span>2</span></td>
+            <td class="rank"><span>3</span></td>
             <td>
                 <img src="image 4.jpg" alt="Kartvela">
                 <span class="crown-wrapper">👑<span class="fire"></span></span>
@@ -186,22 +196,15 @@
                 <div class="bio">crackhead</div>
             </td>
         </tr>
+
+        <!-- 4th -->
         <tr>
-            <td class="rank"><span>3</span></td>
+            <td class="rank"><span>4</span></td>
             <td>
                 <img src="image 2.jpg" alt="Saba BTN Xucishvili">
                 <span class="crown-wrapper">👑<span class="fire"></span></span>
                 <span class="name-animated">Saba BTN Xucishvili</span>
                 <div class="bio">Master of Regression</div>
-            </td>
-        </tr>
-        <tr>
-            <td class="rank"><span>4</span></td>
-            <td>
-                <img src="image 3.jpg" alt="GABRIEL TONA">
-                <span class="crown-wrapper">👑<span class="fire"></span></span>
-                <span class="name-animated">GABRIEL TONA</span>
-                <div class="bio">mini rira ramirez</div>
             </td>
         </tr>
     </tbody>
